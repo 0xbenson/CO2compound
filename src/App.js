@@ -1,5 +1,4 @@
 import './App.css';
-import artwork from './artwork.mp4';
 
 function App() {
   return (
@@ -25,7 +24,7 @@ function Artwork() {
       </div>
       <div style = {{ textAlign: 'center' }}>
         <video id = "artwork" className='artwork' autoPlay loop muted>
-          <source src={artwork} type='video/mp4' />
+          <source src={'https://k7veu4em4t7x7booofdvvhbcksgh34zgepjh62i55uiomvluhn5a.arweave.net/V-pKcIzk_3-FznFHWpwiVIx98yYj0n9pHe0Q5lV0O3o'} type='video/mp4' />
         </video>
         <div style={{ display: 'flex', justifyContent: 'space-between' }}>
           <header className = "caption" style = {{textAlign: 'left', padding: '0 0 8px calc(25vw - 355px)'}}>
@@ -106,27 +105,22 @@ function About() {
         <span style={{ color: "#6D6D6D", fontWeight: '500' }}>carbon compounding artwork.</span>
       </header>
       <p className = "about">
-        The work is functioning as a black hole for 1 staked $KLIMA token.
-        This token is irreversibly fused into the artworks smart contract (0x12345...).
+        This work is functioning as a black hole for 1 staked $KLIMA token.
+        The token is irreversibly fused into the artworks smart contract (0x12345...).
         The token is impossible to unstake / redeem and will, as long KlimaDAO exists, 
-        express an economic interest and stake in the DAO and therefore the broader 
-        carbon market. At launch the work owns 3,2T of CO2 offset.
+        express an economic interest and stake in the DAO and therefore the broader carbon market. At launch the work owned 4,14T of CO2 offset.
         This website is tracking its growth.
       </p>
       <p className = "about">
-        The work explores the question as to wheter art can emerge from being a subject 
-        of economic interest & speculation to being an expression of it, i.e the artwork 
-        becomes an economic actor with a transparent & immutaable finanical intent that
+        The work explores the question as to wheter art can emerge from being a subject of economic interest & speculation to being an 
+        expression of it, i.e the artwork becomes an economic actor with a transparent & immutaable finanical intent that
         cant be influenced or changed by either artist or collectors in the future.
       </p>
       <p className = "about">
-        KlimaDAO itself is an agent of both financial and climate activism through novel
-        blockchain-powered market coordination. The work therefore explores the idea of
-        becoming an active participant in the financial coordination problem which at one
-        level underscores the climate crisis. The piece, by incorporating KLIMA tokens,
-        serves to create upward price pressure on the global carbon market. It is thus an 
-        element of leverage in the system, rather than a purely subjective object open to 
-        financial speculation.
+        KlimaDAO itself is an agent of both financial and climate activism through novel blockchain-powered market coordination.  
+        The work therefore explores the idea of becoming an active participant in the financial coordination problem which at one level 
+        underscores the climate crisis. The piece, by incorporating KLIMA tokens, serves to create upward price pressure on the 
+        global carbon market. It is thus an element of leverage in the system, rather than a purely subjective object open to financial speculation.
       </p>
       <p className = "about">
         The climate crisis at its core, is a collective action & coordination problem.
