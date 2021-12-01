@@ -85,7 +85,7 @@ function Graph() {
       </div>
       <div style = {{animation: 'fadeInLeft 1.3s', display: 'flex', justifyContent: 'space-between', paddingTop: '80px'}}>
         <a className = "opensea" href="https://dune.xyz/Cujowolf/Klima-DAO" target="_blank">View on Dune Analytics</a>
-        <a className = "opensea" href="https://polygonscan.com/token/0xb0c22d8d350c67420f06f48936654f567c73e8c8" target="_blank">View on Opensea</a>
+        <a className = "opensea" href="https://polygonscan.com/token/0xb0c22d8d350c67420f06f48936654f567c73e8c8" target="_blank">View on PolygonScan</a>
         <a className = "opensea" href="https://www.arweave.org/" target="_blank">View on ArWeave</a>
       </div>
       <hr/>
