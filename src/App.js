@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <Artwork/>
-      <Graph/>
+      <Documentation/>
       <About/>
       <Footer/>
     </div>
@@ -29,16 +29,25 @@ function Artwork() {
           <source src={'https://k7veu4em4t7x7booofdvvhbcksgh34zgepjh62i55uiomvluhn5a.arweave.net/V-pKcIzk_3-FznFHWpwiVIx98yYj0n9pHe0Q5lV0O3o'} type='video/mp4' />
         </video>
         <div className = "artwork-info">
-          <header className = "caption" style = {{textAlign: 'left', padding: '0 0 8px calc(25vw - 355px)'}}>
-            ⤷ KLIMADAO x SVN / 2021
+          <header className = "collab" style = {{textAlign: 'left', padding: '0 0 8px calc(25vw - 355px)'}}>
+            { useMediaQuery({ query: '(max-width: 450px)' }) ? "KLIMADAO x SVN / 2021" : "⤷ KLIMADAO x SVN / 2021" }
           </header>
           <header className = "edition" style = {{animation: 'fadeInRight 1.3s', fontStyle: 'italic'}} >
             Edition 1 of 1
           </header>
         </div>
-        <header className = "caption-info" style = {{textAlign: 'left', padding: '0 0 8px calc(25vw - 355px)'}}>
-          Video / 2000px x 2000px / 240 frames / 10sec / mp4
-        </header>
+        { useMediaQuery({ query: '(max-width: 450px)' })
+        ? 
+          <header className = "caption-info" style = {{textAlign: 'left', padding: '0 0 8px calc(25vw - 355px)'}}>
+            Video / 2000px x 2000px
+            <br/>
+            / 240 frames / 10sec / mp4
+          </header>
+        :
+          <header className = "caption-info" style = {{textAlign: 'left', padding: '0 0 8px calc(25vw - 355px)'}}>
+            Video / 2000px x 2000px / 240 frames / 10sec / mp4
+          </header>
+        }
         <header className = "caption-info" style = {{textAlign: 'left', padding: '0 0 0 calc(25vw - 355px)'}}>
           <a className = "opensea" href="https://opensea.io/" target="_blank">View on Opensea</a>
         </header>
@@ -48,7 +57,7 @@ function Artwork() {
   )
 }
 
-function Graph() {
+function Documentation() {
   const Web3 = require('web3');
   const web3 = new Web3(new Web3.providers.HttpProvider('https://matic.getblock.io/mainnet/?api_key=2b421f08-5113-40e1-a599-8f8cfedceb7e'));
 
@@ -93,7 +102,7 @@ function Graph() {
 
   return (
     <div>
-      <header className = "caption" style={{padding: '10px 0 110px 0'}}>
+      <header className = "section-documentation" style={{padding: '10px 0 100px 0'}}>
         01 <span style={{ color: "#6D6D6D" }}>DOCUMENTATION</span>
       </header>
       <div className = "documentation">
@@ -127,7 +136,7 @@ function Graph() {
 function About() {
   return (
     <div style={{paddingBottom: '20px'}}>
-      <header className = "caption" style={{padding: '10px 0 50px 0'}}>
+      <header className = "section" style={{padding: '10px 0 50px 0'}}>
         02 <span style={{ color: "#6D6D6D" }}>ABOUT</span>
       </header>
       { useMediaQuery({ query: '(max-width: 450px)' })
@@ -146,29 +155,26 @@ function About() {
       }
       <p className = "about">
         The work is functioning as a black hole for 1 staked $KLIMA token.
-        This token is irreversibly fused into the artworks smart contract (0x12345...).
-        The token is impossible to unstake / redeem and will, as long KlimaDAO exists, 
-        express an economic interest and stake in the DAO and therefore the broader 
-        carbon market. At launch the work owns 3,2T of CO2 offset.
+        This token is irreversibly fused into the artworks smart contract.
+        The token is impossible to unstake / redeem and will, as long KlimaDAO exists, express an economic interest and stake in the DAO and therefore the broader carbon market. At launch the work owned 4.14T of CO2 offset.
         This website is tracking its growth.
       </p>
       <p className = "about">
-        The work explores the question as to wheter art can emerge from being a subject 
-        of economic interest & speculation to being an expression of it, i.e the artwork 
-        becomes an economic actor with a transparent & immutaable finanical intent that
-        cant be influenced or changed by either artist or collectors in the future.
+        The work explores the question as to whether art can emerge from being a subject of economic interest & 
+        speculation to being an expression of it, i.e the artwork becomes an economic actor with a transparent & 
+        immutable financial intent that cant be influenced or changed by either 
+        artist or collectors in the future.
       </p>
       <p className = "about">
-        KlimaDAO itself is an agent of both financial and climate activism through novel
-        blockchain-powered market coordination. The work therefore explores the idea of
-        becoming an active participant in the financial coordination problem which at one
-        level underscores the climate crisis. The piece, by incorporating KLIMA tokens,
-        serves to create upward price pressure on the global carbon market. It is thus an 
-        element of leverage in the system, rather than a purely subjective object open to 
-        financial speculation.
+        KlimaDAO itself is an agent of both financial and climate activism through novel blockchain-powered
+        market coordination.  The work therefore explores the idea of becoming an active participant in
+        the financial coordination problem which at one level underscores the climate crisis.
+        The piece, by incorporating KLIMA tokens, serves to create upward price pressure on the global
+        carbon market. It is thus an element of leverage in the system, rather than a purely subjective
+        object open to financial speculation.
       </p>
       <p className = "about">
-        The climate crisis at its core, is a collective action & coordination problem.
+        The climate crisis at its core, is a collective action & coordination problem. 
         There is no one way to solve it. This is an experiment.
       </p>
       <hr/>
@@ -179,10 +185,10 @@ function About() {
 function Footer() {
   return (
     <div style={{paddingBottom: "25vh"}}>
-      <header className = "caption">
+      <header className = "footer">
         <a className = "footer" href = "https://www.klimadao.finance/" target="_blank">KLIMADAO</a>
-        &nbsp; x &nbsp;
-        <a className = "footer" href = "https://www.instagram.com/sven.eberwein/?hl=en" target="_blank">SVN</a>
+          &nbsp;&nbsp; X &nbsp;&nbsp;
+        <a className = "footer" href = "https://twitter.com/__s_v_n__" target="_blank">SVN</a>
       </header>
     </div>
   )
