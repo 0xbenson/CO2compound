@@ -49,7 +49,7 @@ function Artwork() {
           </header>
         }
         <header className = "caption-info" style = {{textAlign: 'left', padding: '0 0 0 calc(25vw - 355px)'}}>
-          <a className = "opensea" href="https://opensea.io/" target="_blank">View on Opensea</a>
+          <a className = "opensea" href="https://opensea.io/assets/matic/0x08e253270240509e57b9543c0453f0bac839d0a1/0" target="_blank">View on Opensea</a>
         </header>
       </div>
       <hr/>
@@ -122,9 +122,9 @@ function Documentation() {
         </div>
       </div>
       <div className = "documentation-links">
-        <a className = "documentation-link" href="https://dune.xyz/Cujowolf/Klima-DAO" target="_blank">View on Dune Analytics</a>
+        <a className = "documentation-link" href="https://dune.xyz/svn/CO2_COMPOUND" target="_blank">View on Dune Analytics</a>
         <br/>
-        <a className = "documentation-link" href="https://polygonscan.com/token/0xb0c22d8d350c67420f06f48936654f567c73e8c8" target="_blank">View on Opensea</a>
+        <a className = "documentation-link" href="https://polygonscan.com/address/0x08e253270240509E57B9543c0453F0bAc839d0a1" target="_blank">View on PolygonScan</a>
         <br/>
         <a className = "documentation-link" href="https://k7veu4em4t7x7booofdvvhbcksgh34zgepjh62i55uiomvluhn5a.arweave.net/V-pKcIzk_3-FznFHWpwiVIx98yYj0n9pHe0Q5lV0O3o" target="_blank">View on ArWeave</a>
       </div>
