@@ -117,7 +117,7 @@ function Documentation() {
         <div>
           <header id = "carbonTonnes" className = "KLIMAindex" style = {{animation: 'fadeInRight 1.3s'}}/>
           <header className = "caption-grey" style = {{animation: 'fadeInRight 1.3s'}}>
-            EQUALING CARBON TONES
+            EQUALING CARBON TONS
           </header>
         </div>
       </div>
